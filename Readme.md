@@ -11,6 +11,8 @@ ZNet Scanner is a robust Java-based network scanning tool engineered for fast, a
 - **Clear Results**: Option to clear all scan results and logs with a single button click.
 - **Expandable Tree View**: Tree structure view of devices and their details, expandable to show ports and other information.
 
+![Screenshot_2024-07-16_17_28_10(1)](https://github.com/user-attachments/assets/d92f5a18-76b7-47a5-809e-21f41568e2ab)
+
 ## Getting Started
 
 ### Installation
