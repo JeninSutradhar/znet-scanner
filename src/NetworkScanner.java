@@ -23,7 +23,7 @@ public class NetworkScanner extends JFrame {
 
     // Constructor for the Network Scanner application
     public NetworkScanner() {
-        super("ZNet Scanner v1.0.0"); // Set window title
+        super("ZNet Scanner v1.0.1"); // Set window title
 
         // Initialize tree components for displaying scan results
         rootNode = new DefaultMutableTreeNode("Devices");
