@@ -149,21 +149,28 @@ public class NetworkScanner extends JFrame {
     }
 
     // Method to retrieve local IP address
-    private String getLocalIPAddress() throws SocketException {
-        Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
-        while (interfaces.hasMoreElements()) {
-            NetworkInterface iface = interfaces.nextElement();
-            if (iface.isLoopback() || !iface.isUp()) continue;
-
-            Enumeration<InetAddress> addresses = iface.getInetAddresses();
-            while(addresses.hasMoreElements()) {
-                InetAddress addr = addresses.nextElement();
-                if (addr instanceof Inet4Address) {
-                    return addr.getHostAddress(); // Return IPv4 address
+    private String getLocalIPAddress() {
+        try {
+            Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
+            while (interfaces.hasMoreElements()) {
+                NetworkInterface iface = interfaces.nextElement();
+                if (iface.isLoopback() || !iface.isUp()) continue;
+    
+                Enumeration<InetAddress> addresses = iface.getInetAddresses();
+                while(addresses.hasMoreElements()) {
+                    InetAddress addr = addresses.nextElement();
+                    if (addr instanceof Inet4Address) {
+                        return addr.getHostAddress(); // Return IPv4 address
+                    }
                 }
             }
+            log("Error: No network interface found");
+        } catch (SocketException e) {
+            log("SocketException: " + e.getMessage());
+        } catch (Exception e) {
+            log("Unexpected exception: " + e.getMessage());
         }
-        throw new SocketException("No network interface found");
+        return "Unknown IP Address"; // Return a default value in case of failure
     }
 
     // Method to scan a specific host and retrieve device information
