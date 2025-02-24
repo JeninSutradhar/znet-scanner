@@ -39,8 +39,7 @@ ZNet Scanner is a robust Java-based network scanning tool engineered for fast, a
 ### Usage
 
 - Click **Scan Network** to initiate the scanning process.
-- Progress and results will be displayed in the GUI.
-- Use **Clear Results** to reset the scan and start fresh.
+- Progress and results will be automatically displayed in the GUI ;)
 
 ## Contributing
 
