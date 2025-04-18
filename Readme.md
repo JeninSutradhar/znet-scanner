@@ -2,6 +2,10 @@
 
 ZNet Scanner is an enhanced Java-based network scanning tool designed for accurate discovery and analysis of devices on a local network. It intelligently identifies the network segment, discovers active devices using multiple techniques, resolves hostnames asynchronously, performs concurrent port scanning, identifies device vendors via MAC lookup, performs basic security checks, monitors for ARP anomalies, and allows exporting results for further analysis.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8221a933-3b60-4126-b7b6-ed065c011667" alt="Screenshot_20241228_102517" width=400>
+</p>
+
 
 ## Key Features
 
