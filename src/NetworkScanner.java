@@ -53,7 +53,7 @@ public class NetworkScanner extends JFrame {
     private final Map<String, CompletableFuture<String>> hostnameFutures = new ConcurrentHashMap<>(); // Track ongoing DNS lookups
     private LocalNetworkDetails selectedNetwork = null; // Details of the network to scan
     private String gatewayIp = null; // Guessed gateway IP (from selectedNetwork)
-    private ScheduledExecutorService arpMonitorScheduler;
+    private ScheduledExecutorService arpMonitorScheduler; // ARP MONITOR SCHEDULER
     private SwingWorker<Void, DeviceInfo> scanWorker = null; // Reference to the current scan worker
 
     // --- Inner Class for Network Details ---
